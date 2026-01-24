@@ -6,10 +6,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Michael Hosamani - Full Stack Developer",
-  description: "Portfolio of Michael Hosamani - Full Stack Developer specializing in TypeScript, Next.js, MERN Stack, and Node.js",
+  title: "Atharva Narvekar - Full Stack Developer",
+  description: "Portfolio of Atharva Narvekar - Full Stack Developer specializing in TypeScript, Next.js, MERN Stack, and Node.js",
   icons: {
-    icon: "/letter-m.png"
+    icon: "/letter-a.png"
   }
 }
 
