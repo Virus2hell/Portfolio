@@ -344,7 +344,7 @@ hunger issues.</li>
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
                   <Button asChild>
-                    <a href="mailto:michaelhosamani26@gmail.com" className="flex items-center gap-2">
+                    <a href="mailto:atharvanarvekar269@gmail.com" className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
                       Send Email
                     </a>
@@ -362,7 +362,7 @@ hunger issues.</li>
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          © Michael Hosamani - 2025
+          © Atharva Narvekar - 2026
         </motion.footer>
       </div>
     </div>
