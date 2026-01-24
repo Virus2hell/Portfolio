@@ -1,51 +1,42 @@
 export const projects = [
   {
-    title: "Collabodraw",
+    title: "DSA Socio",
     description:
-      "Built a real-time collaborative drawing app from scratch with custom canvas logic, 20% faster load/render times, and integrated AI-powered drawing generation for creative assistance.",
-    tech: ["TypeScript", "Next.js", "Express", "WebSockets", "Zustand", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    link: "collabodraw.mikexdev.in",
-    github: "https://github.com/michael-020",
-    image: "/images/projects/collabodraw.png",
-    imageAlt: "Collabodraw collaborative drawing interface with real-time canvas and AI tools"
+      "A collaborative full-stack platform for structured DSA preparation that includes partner matching, progress tracking, and real-time interaction features to help users practice and grow together.",
+    tech: ["TypeScript", "React", "Node.js", "Express.js", "MongoDB", "WebSockets"],
+    link: "https://dsa-socio.vercel.app",
+    github: "https://github.com/Virus2hell/DSA-Buddy",
+    image: "/images/projects/dsa-socio.png",
+    imageAlt: "DSA Socio collaborative platform interface"
   },
   {
-    title: "CacheUpp",
+    title: "KeyWorded",
     description:
-      "Developed feature-rich social platform with posts, likes, comments, real-time chat, friend system, and forums, implementing Google OAuth 2.0 from scratch.",
-    tech: ["TypeScript", "MERN", "Pgvector", "WebSockets", "Zustand", "MongoDB"],
-    link: "cacheupp.com",
-    github: "https://github.com/michael-020",
-    image: "/images/projects/cacheupp.png",
-    imageAlt: "CacheUpp social platform showing posts feed and real-time chat interface"
+      "Built a resume-job comparison tool that highlights missing keywords, suggests improvements, generates tailored cover letters, and creates learning roadmaps to make job hunting less overwhelming without storing documents permanently.",
+    tech: ["TypeScript", "Next.js", "Node.js", "Express"],
+    link: "https://keyworded.in",
+    github: "https://github.com/Virus2hell/AI-Resume-Analyzer",
+    image: "/images/projects/keyworded.png",
+    imageAlt: "KeyWorded resume analyzer interface"
   },
   {
-    title: "ReadmeX",
+    title: "Live Docs",
     description:
-      "Designed and developed an AI-powered tool to generate professional, customizable README files with live Markdown preview and formatting support.",
-    tech: ["TypeScript", "Next.js", "Framer Motion", "Zustand", "Prisma", "PostgreSQL"],
-    link: "readmex.mikexdev.in",
-    github: "https://github.com/michael-020",
-    image: "/images/projects/readmex.png",
-    imageAlt: "ReadmeX AI-powered README generator with live preview and customization options"
+      "Developed a live documentation platform that allows users to create, share, and view real-time editable docs — designed to improve collaborative writing and knowledge sharing workflows.",
+    tech: ["TypeScript", "React", "Node.js", "Express"],
+    link: "https://live-docs-3in9.vercel.app",
+    github: "https://github.com/Virus2hell/LiveDocs",
+    image: "/images/projects/livedocs.png",
+    imageAlt: "Live Docs collaborative documentation editor"
   },
   {
-    title: "DevTalk",
+    title: "Recipe Sharing Platform",
     description:
-      "Created real-time chat application with WebSockets, TypeScript, and Framer Motion, implementing robust authentication from scratch using cookies and bcrypt.",
-    tech: ["TypeScript", "MERN Stack", "WebSockets", "Zustand", "MongoDB"],
-    link: "devtalk.mikexdev.in",
-    github: "https://github.com/michael-020",
-    image: "/images/projects/devtalk.png",
-    imageAlt: "DevTalk real-time chat application with modern messaging interface"
-  },
-  {
-    title: "Coders-cafe",
-    description: "Responsive landing page built with Next.js, Tailwind, and Framer Motion for clean UI and smooth animations.",
-    tech: ["TypeScript", "Next.js", "Framer-motion"],
-    link: "coders-cafe.mikexdev.in",
-    github: "https://github.com/michael-020/coders-cafe",
-    image: "/images/projects/coders-cafe.png",
-    imageAlt: "Coders Cafe responsive landing page with modern design and animations"
+      "A full-stack web application built with the MERN stack that lets users share their recipes, browse others’ contributions, save favorites, and explore detailed recipe information with secure authentication.",
+    tech: ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+    link: "",
+    github: "https://github.com/Virus2hell/Recipe_Sharing_Platform",
+    image: "/images/projects/recipe-sharing.png",
+    imageAlt: "Recipe Sharing Platform interface with user-generated recipes"
   }
-]
+];
