@@ -1,17 +1,15 @@
 export const skills = {
-  Languages: ["JavaScript", "TypeScript", "C/C++"],
+  Languages: ["C++", "JavaScript", "TypeScript"],
   "Frameworks & Libraries": [
     "React.js",
     "Node.js",
     "Express.js",
     "Next.js",
-    "Framer Motion",
-    "Zustand",
+    "Three.js",
     "Tailwind CSS",
   ],
-  "Databases & Tools": ["PostgreSQL", "Prisma", "MongoDB", "Docker"],
+  "Databases & Tools": ["MySQL", "Supabase", "MongoDB", "PostgreSQL"],
   "Concepts & Development Skills": [
-    "WebSockets",
     "Data Structures & Algorithms",
     "API Development",
     "RESTful Services",
