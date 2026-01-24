@@ -77,18 +77,17 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Michael Hosamani
+              Atharva Narvekar
             </motion.h1>
             <motion.p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 px-2" variants={fadeInUp}>
-              Full Stack Developer & Open Source Contributor
+              Full Stack Developer | Open Source Learner
             </motion.p>
             <motion.div 
               className="text-base sm:text-lg md:text-xl text-muted-foreground text-justify max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 px-2"
               variants={fadeInUp}
             >
               <p>
-                I'm a Full Stack Developer with a passion for crafting accessible, pixel-perfect user interfaces that seamlessly blend thoughtful design 
-                with robust engineering. I specialize in building modern, scalable web applications using Next.js, MERN Stack, TypeScript, and Tailwind CSS.
+                I’m a Full Stack Developer who enjoys turning ideas into practical, real-world solutions through clean design and reliable engineering. I focus on building modern, scalable web applications using the MERN and PERN stacks, along with TypeScript and Next.js, ensuring performance, maintainability, and a smooth user experience.
               </p>
               
               <AnimatePresence mode="wait">
@@ -101,11 +100,10 @@ export default function Portfolio() {
                     className="overflow-hidden"
                   >
                     <p>
-                      My expertise spans from building intuitive frontends to architecting performant backends with REST APIs and WebSockets. 
-                      I'm especially drawn to projects at the intersection of design, development, and AI, where user experience meets technical excellence.
+                     I’ve worked on developing responsive user interfaces and implementing backend systems using REST APIs and real-time communication. I regularly practice Data Structures and Algorithms to strengthen my problem-solving approach and write more efficient, reliable solutions.
                     </p>
                     <p className="mt-4">
-                      I thrive in environments that challenge me to learn, push boundaries, and build meaningful digital products that make an impact.
+                     I enjoy contributing to open-source projects and learning from the developer community. I’m motivated by environments that encourage growth, collaboration, and the opportunity to build software that makes a positive impact.
                     </p>
                   </motion.div>
                 )}
