@@ -87,7 +87,7 @@ export default function Portfolio() {
               variants={fadeInUp}
             >
               <p>
-                I’m a Full Stack Developer who enjoys turning ideas into practical, real-world solutions through clean design and reliable engineering. I focus on building modern, scalable web applications using the MERN and PERN stacks, along with TypeScript and Next.js, ensuring performance, maintainability, and a smooth user experience.
+                I’m a Full Stack Developer who enjoys building meaningful web applications that solve real-world problems. I primarily work with the MERN and PERN stacks, along with TypeScript and Next.js, and I focus on writing clean, maintainable code while continuously improving my craft.
               </p>
               
               <AnimatePresence mode="wait">
@@ -123,14 +123,14 @@ export default function Portfolio() {
 
           <motion.div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 px-2" variants={fadeInUp}>
             <Button variant="outline" size="sm" asChild title="Email">
-              <a href="mailto:michaelhosamani26@gmail.com" className="flex items-center gap-2">
+              <a href="mailto:atharvanarvekar269@gmail.com" className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 <span className="hidden xs:inline">Email</span>
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild title="GitHub">
               <a
-                href="https://github.com/michael-020"
+                href="https://github.com/Virus2hell"
                 target="_blank"
                 className="flex items-center gap-2"
                 rel="noreferrer"
@@ -141,7 +141,7 @@ export default function Portfolio() {
             </Button>
             <Button variant="outline" size="sm" asChild title="LinkedIn">
               <a
-                href="https://linkedin.com/in/michael-hosamani0206/"
+                href="https://www.linkedin.com/in/atharva-narvekar-8535862b1/"
                 target="_blank"
                 className="flex items-center gap-2"
                 rel="noreferrer"
@@ -150,22 +150,9 @@ export default function Portfolio() {
                 <span className="hidden xs:inline">LinkedIn</span>
               </a>
             </Button>
-            <Button variant="outline" size="sm" asChild title="X">
-              <a
-                href="https://x.com/MichaelHosamani"
-                target="_blank"
-                className="flex items-center gap-2"
-                rel="noreferrer"
-              >
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-                <span className="hidden xs:inline">X</span>
-              </a>
-            </Button>
             <Button variant="outline" size="sm" asChild title="Resume">
               <a
-                href="https://drive.google.com/file/d/1VKa07n8xvyZ7CX3439G_VDlBWz4nhF70/view?usp=sharing"
+                href="https://drive.google.com/file/d/1wggjuzQD8aBNgTGb7kFUWpEBOJNL9gd2/view?usp=drive_link"
                 target="_blank"
                 className="flex items-center gap-2"
                 rel="noreferrer"
@@ -194,21 +181,22 @@ export default function Portfolio() {
               <CardContent className="p-4 sm:p-6">
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3 sm:gap-0">
                   <div>
-                    <h3 className="text-lg sm:text-xl font-semibold">Keploy Open Source Contributor</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold">Frontend Developer Intern, IBM – India, Remote</h3>
                     <Badge variant="secondary" className="mt-2 w-fit">
                       <Award className="w-3 h-3 mr-1" />
-                      Top 3 Contributor - March 2025
+                      Jun 2024 – Aug 2024
                     </Badge>
                   </div>
                 </div>
                 <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
                   <li>
-                    • Contributed merged PR implementing paginated blog listings for Community and Technology sections
-                    using Next.js, GraphQL, and TailwindCSS.
+                    • Collaborated with a team to develop a website focused on the Zero Hunger theme using HTML, CSS, and
+JavaScript.
                   </li>
-                  <li>• Enhanced blog website performance and user experience through efficient pagination system.</li>
+                  <li>• Designed a responsive UI for the Zero Hunger website to present the latest articles and blogs related to global
+hunger issues.</li>
                 </ul>
-                <Button variant="outline" size="sm" className="mt-4 bg-transparent" asChild>
+                {/* <Button variant="outline" size="sm" className="mt-4 bg-transparent" asChild>
                   <a
                     href="https://github.com/keploy/blog-website/pull/98"
                     target="_blank"
@@ -218,7 +206,7 @@ export default function Portfolio() {
                     <ExternalLink className="w-3 h-3" />
                     View PR
                   </a>
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           </motion.div>
