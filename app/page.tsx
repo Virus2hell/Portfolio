@@ -18,39 +18,39 @@ const fadeInUp = {
 }
 
 const expandedTextVariants = {
-  initial: { 
-    opacity: 0, 
+  initial: {
+    opacity: 0,
     height: 0,
     marginTop: 0
   },
-  animate: { 
-    opacity: 1, 
+  animate: {
+    opacity: 1,
     height: "auto",
     marginTop: "1rem",
-    transition: { 
-      duration: 0.5, 
-      ease: easeInOut, 
+    transition: {
+      duration: 0.5,
+      ease: easeInOut,
       opacity: { delay: 0.1, duration: 0.3 }
     }
   },
-  exit: { 
-    opacity: 0, 
+  exit: {
+    opacity: 0,
     height: 0,
     marginTop: 0,
-    transition: { 
-      duration: 0.4, 
-      ease: easeInOut, 
+    transition: {
+      duration: 0.4,
+      ease: easeInOut,
       height: { delay: 0.1 }
     }
   }
 }
 
 const buttonVariants = {
-  hover: { 
+  hover: {
     scale: 1.05,
     transition: { duration: 0.2, ease: easeInOut }
   },
-  tap: { 
+  tap: {
     scale: 0.95,
     transition: { duration: 0.1, ease: easeInOut }
   }
@@ -82,14 +82,14 @@ export default function Portfolio() {
             <motion.p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 px-2" variants={fadeInUp}>
               Full Stack Developer | Open Source Learner
             </motion.p>
-            <motion.div 
+            <motion.div
               className="text-base sm:text-lg md:text-xl text-muted-foreground text-justify max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 px-2"
               variants={fadeInUp}
             >
               <p>
                 I’m a Full Stack Developer who enjoys building meaningful web applications that solve real-world problems. I primarily work with the MERN and PERN stacks, along with TypeScript and Next.js, and I focus on writing clean, maintainable code while continuously improving my craft.
               </p>
-              
+
               <AnimatePresence mode="wait">
                 {showMore && (
                   <motion.div
@@ -100,10 +100,10 @@ export default function Portfolio() {
                     className="overflow-hidden"
                   >
                     <p>
-                     I’ve worked on developing responsive user interfaces and implementing backend systems using REST APIs and real-time communication. I regularly practice Data Structures and Algorithms to strengthen my problem-solving approach and write more efficient, reliable solutions.
+                      I’ve worked on developing responsive user interfaces and implementing backend systems using REST APIs and real-time communication. I regularly practice Data Structures and Algorithms to strengthen my problem-solving approach and write more efficient, reliable solutions.
                     </p>
                     <p className="mt-4">
-                     I enjoy contributing to open-source projects and learning from the developer community. I’m motivated by environments that encourage growth, collaboration, and the opportunity to build software that makes a positive impact.
+                      I enjoy contributing to open-source projects and learning from the developer community. I’m motivated by environments that encourage growth, collaboration, and the opportunity to build software that makes a positive impact.
                     </p>
                   </motion.div>
                 )}
@@ -122,12 +122,22 @@ export default function Portfolio() {
           </motion.div>
 
           <motion.div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 px-2" variants={fadeInUp}>
-            <Button variant="outline" size="sm" asChild title="Email">
-              <a href="mailto:atharvanarvekar269@gmail.com" className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span className="hidden xs:inline">Email</span>
-              </a>
+            <Button
+              variant="outline"
+              size="sm"
+              title="Email"
+              onClick={() => {
+                window.open(
+                  "https://mail.google.com/mail/?view=cm&fs=1&to=atharvanarvekar269@gmail.com&su=Hello%20Atharva&body=Hi%20Atharva,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.%0A%0AThanks!",
+                  "_blank"
+                )
+              }}
+              className="flex items-center gap-2"
+            >
+              <Mail className="w-4 h-4" />
+              <span className="hidden xs:inline">Email</span>
             </Button>
+
             <Button variant="outline" size="sm" asChild title="GitHub">
               <a
                 href="https://github.com/Virus2hell"
@@ -163,7 +173,7 @@ export default function Portfolio() {
             </Button>
           </motion.div>
         </motion.section>
-        
+
         <div id="experience" className="relative -top-20 sm:-top-40"></div>
         <motion.section
           className="mb-16 sm:mb-20"
@@ -191,29 +201,18 @@ export default function Portfolio() {
                 <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
                   <li>
                     • Collaborated with a team to develop a website focused on the Zero Hunger theme using HTML, CSS, and
-JavaScript.
+                    JavaScript.
                   </li>
                   <li>• Designed a responsive UI for the Zero Hunger website to present the latest articles and blogs related to global
-hunger issues.</li>
+                    hunger issues.</li>
                 </ul>
-                {/* <Button variant="outline" size="sm" className="mt-4 bg-transparent" asChild>
-                  <a
-                    href="https://github.com/keploy/blog-website/pull/98"
-                    target="_blank"
-                    className="flex items-center gap-2"
-                    rel="noreferrer"
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                    View PR
-                  </a>
-                </Button> */}
               </CardContent>
             </Card>
           </motion.div>
         </motion.section>
-        
+
         <div id="projects" className="relative -top-20 sm:-top-40"></div>
-       <motion.section
+        <motion.section
           className="mb-16 sm:mb-20"
           initial="initial"
           whileInView="animate"
@@ -227,7 +226,7 @@ hunger issues.</li>
           <motion.div className="grid gap-6 sm:gap-8">
             {projects.map((project, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className={`${project.title === "Coders-cafe" ? " p-0 lg:py-10 lg:pl-5": "p-0 lg:pl-5"} hover:shadow-lg dark:hover:shadow-accent transition-all duration-300 hover:-translate-y-1 overflow-hidden`}>
+                <Card className={`${project.title === "Coders-cafe" ? " p-0 lg:py-10 lg:pl-5" : "p-0 lg:pl-5"} hover:shadow-lg dark:hover:shadow-accent transition-all duration-300 hover:-translate-y-1 overflow-hidden`}>
                   <div className="grid items-center lg:grid-cols-2 gap-0">
                     <div className="relative aspect-video border w-full bg-muted order-1 rounded-md overflow-hidden">
                       <a
@@ -270,12 +269,12 @@ hunger issues.</li>
                             </Button>
                           </div>
                         </div>
-                        
+
                         <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
                           {project.description}
                         </p>
                       </div>
-                      
+
                       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-auto">
                         {project.tech.map((tech, techIndex) => (
                           <Badge key={techIndex} variant="secondary" className="text-xs">
@@ -321,7 +320,7 @@ hunger issues.</li>
             ))}
           </motion.div>
         </motion.section>
-        
+
         <div id="contact" className="relative -top-20 sm:-top-40"></div>
         <motion.section
           className="mb-16 sm:mb-20"
@@ -343,11 +342,18 @@ hunger issues.</li>
                   technology.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                  <Button asChild>
-                    <a href="mailto:atharvanarvekar269@gmail.com" className="flex items-center gap-2">
-                      <Mail className="w-4 h-4" />
-                      Send Email
-                    </a>
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      window.open(
+                        "https://mail.google.com/mail/?view=cm&fs=1&to=atharvanarvekar269@gmail.com&su=Hello%20Atharva&body=Hi%20Atharva,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.%0A%0AThanks!",
+                        "_blank"
+                      )
+                    }}
+                    className="flex items-center gap-2"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Send Email
                   </Button>
                 </div>
               </CardContent>
