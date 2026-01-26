@@ -1,5 +1,5 @@
 export const skills = {
-  Languages: ["C++", "JavaScript", "TypeScript"],
+  Languages: ["C++", "JavaScript", "TypeScript", "SQL"],
   "Frameworks & Libraries": [
     "React.js",
     "Node.js",
