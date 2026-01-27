@@ -230,7 +230,7 @@ export default function Portfolio() {
                   <div className="grid items-center lg:grid-cols-2 gap-0">
                     <div className="relative aspect-video border w-full bg-muted order-1 rounded-md overflow-hidden">
                       <a
-                        href={`https://${project.link}`}
+                        href={`${project.link}`}
                         target="_blank"
                         className="flex items-center gap-1"
                         rel="noreferrer"
