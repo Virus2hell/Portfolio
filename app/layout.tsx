@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Atharva Narvekar - Full Stack Developer",
   description: "Portfolio of Atharva Narvekar - Full Stack Developer specializing in TypeScript, Next.js, MERN Stack, and Node.js",
   icons: {
-    icon: "/public/letter-a.png",
+    icon: "/favicon.ico",
   }
 }
 
