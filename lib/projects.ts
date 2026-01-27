@@ -4,7 +4,7 @@ export const projects = [
     description:
       "A collaborative full-stack platform for structured DSA preparation that includes partner matching, progress tracking, and real-time interaction features to help users practice and grow together.",
     tech: ["TypeScript", "React", "Node.js", "Express.js", "Supabase", "pusher"],
-    link: "https://dsa-socio.vercel.app/",
+    link: "dsa-socio.vercel.app",
     github: "https://github.com/Virus2hell/DSA-Buddy",
     image: "/images/projects/dsa-socio.png",
     imageAlt: "DSA Socio collaborative platform interface"
