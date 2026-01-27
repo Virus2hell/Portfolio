@@ -14,7 +14,7 @@ export const projects = [
     description:
       "Built a resume-job comparison tool that highlights missing keywords, suggests improvements, generates tailored cover letters, and creates learning roadmaps to make job hunting less overwhelming without storing documents permanently.",
     tech: ["TypeScript", "React", "Supabase", "Node.js"],
-    link: "https://keyworded.in/",
+    link: "keyworded.in",
     github: "https://github.com/Virus2hell/AI-Resume-Analyzer",
     image: "/images/projects/keyworded.png",
     imageAlt: "KeyWorded resume analyzer interface"
