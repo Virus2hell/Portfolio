@@ -24,7 +24,7 @@ export const projects = [
     description:
       "Developed a live documentation platform that allows users to create, share, and view real-time editable docs — designed to improve collaborative writing and knowledge sharing workflows.",
     tech: ["TypeScript", "Next.js", "clerk"],
-    link: "https://live-docs-3in9.vercel.app",
+    link: "live-docs-3in9.vercel.app",
     github: "https://github.com/Virus2hell/LiveDocs",
     image: "/images/projects/livedocs.png",
     imageAlt: "Live Docs collaborative documentation editor"
