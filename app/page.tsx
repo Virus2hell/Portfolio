@@ -186,28 +186,67 @@ export default function Portfolio() {
             Experience
           </motion.h2>
 
-          <motion.div variants={fadeInUp}>
-            <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3 sm:gap-0">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-semibold">Frontend Developer Intern, IBM – India, Remote</h3>
-                    <Badge variant="secondary" className="mt-2 w-fit">
-                      <Award className="w-3 h-3 mr-1" />
-                      Jun 2024 – Aug 2024
-                    </Badge>
+          <motion.div className="grid gap-6 sm:gap-8">
+            <motion.div variants={fadeInUp}>
+              <Card className="hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3 sm:gap-0">
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold">Frontend Developer Intern, AltissAdvance Tech Pvt. Ltd – Mumbai, India</h3>
+                      <Badge variant="secondary" className="mt-2 w-fit">
+                        <Award className="w-3 h-3 mr-1" />
+                        Jul 2026 – Oct 2026
+                      </Badge>
+                    </div>
                   </div>
-                </div>
-                <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
-                  <li>
-                    • Collaborated with a team to develop a website focused on the Zero Hunger theme using HTML, CSS, and
-                    JavaScript.
-                  </li>
-                  <li>• Designed a responsive UI for the Zero Hunger website to present the latest articles and blogs related to global
-                    hunger issues.</li>
-                </ul>
-              </CardContent>
-            </Card>
+                  <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                    <li>
+                      • Migrated and modernized Merchant Support and Customer Account Warranty Claim modules from static HTML
+                      to React.js, restructuring components and styling to align with the Axentra OS design system while
+                      preserving existing functionality.
+                    </li>
+                    <li>
+                      • Developed and integrated Module Reviews, Module Configuration, Alert System, Loyalty Points, and
+                      Back-in-Stock workflows by consuming REST APIs, dynamically rendering wizard modules based on backend
+                      conditions, implementing CRUD operations, and building responsive forms, tables, dialogs, and settings
+                      interfaces.
+                    </li>
+                    <li>
+                      • Enhanced Location and Orders/Returns workflows by integrating GET/POST/PATCH/DELETE endpoints,
+                      implementing pagination, status toggling with conditional dialogs, form validations, searchable
+                      country-code selection, display-name management, and an activity timeline with date/time-based change
+                      tracking.
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card className="hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3 sm:gap-0">
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold">Frontend Developer Intern, IBM – India, Remote</h3>
+                      <Badge variant="secondary" className="mt-2 w-fit">
+                        <Award className="w-3 h-3 mr-1" />
+                        Jun 2024 – Aug 2024
+                      </Badge>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+                    <li>
+                      • Collaborated with a team to develop a website focused on the Zero Hunger theme using HTML, CSS, and
+                      JavaScript.
+                    </li>
+                    <li>
+                      • Designed a responsive UI for the Zero Hunger website to present the latest articles and blogs related
+                      to global hunger issues.
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
           </motion.div>
         </motion.section>
 
