@@ -18,7 +18,7 @@ export const mobileProjects: {
     tech: ["React Native", "Expo", "Node.js", "Express.js", "PostgreSQL", "NeonDB", "JWT", "EAS Build"],
     link: "expo.dev/accounts/atharva269/projects/society-manager/builds/dcaf0c72-e2bb-4474-893a-4f2b7b9b6853",
     github: "https://github.com/Virus2hell/Society-Management-App",
-    image: "",
+    image: "images/mobile-projects/society-manager-showcase-4k.png",
     imageAlt: "Society Manager mobile app screens"
   },
   {
@@ -28,7 +28,7 @@ export const mobileProjects: {
     tech: ["React Native", "Expo", "TypeScript", "Socket.IO", "Reanimated", "Node.js"],
     link: "expo.dev/accounts/atharva269/projects/Soccer-Kicks/builds/b379188c-f781-4dd2-b8d8-2b45c1ff0ed1",
     github: "https://github.com/Virus2hell/Soccer-Kicks",
-    image: "",
+    image: "/images/mobile-projects/soccer-pucks-showcase.jpg",
     imageAlt: "Soccer Pucks mobile game screens"
   },
 ];
