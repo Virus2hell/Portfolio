@@ -5,8 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
-import { Github, Linkedin, Mail, ExternalLink, Briefcase, Award, Code2, FolderGit2, File, FileText } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, Briefcase, Award, Code2, FolderGit2, FileText, Globe, Smartphone } from "lucide-react"
 import { projects } from "@/lib/projects"
+import { mobileProjects } from "@/lib/mobile-projects"
 import { skills } from "@/lib/skills"
 import Image from "next/image"
 import { useState } from "react"
@@ -15,6 +16,12 @@ const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, ease: "easeOut" },
+}
+
+const projectListVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: easeInOut } },
+  exit: { opacity: 0, y: -20, transition: { duration: 0.25, ease: easeInOut } },
 }
 
 const expandedTextVariants = {
@@ -58,6 +65,8 @@ const buttonVariants = {
 
 export default function Portfolio() {
   const [showMore, setShowMore] = useState(false)
+  const [projectType, setProjectType] = useState<"web" | "mobile">("web")
+  const visibleProjects = projectType === "web" ? projects : mobileProjects
 
   return (
     <div className="min-h-screen bg-background pb-16 sm:pb-0">
@@ -257,76 +266,124 @@ export default function Portfolio() {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <motion.h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3" variants={fadeInUp}>
-            <FolderGit2 className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-            Projects
-          </motion.h2>
+          <motion.div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8" variants={fadeInUp}>
+            <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-2 sm:gap-3">
+              <FolderGit2 className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+              Projects
+            </h2>
 
-          <motion.div className="grid gap-6 sm:gap-8">
-            {projects.map((project, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className={`${project.title === "Coders-cafe" ? " p-0 lg:py-10 lg:pl-5" : "p-0 lg:pl-5"} hover:shadow-lg dark:hover:shadow-accent transition-all duration-300 hover:-translate-y-1 overflow-hidden`}>
-                  <div className="grid items-center lg:grid-cols-2 gap-0">
-                    <div className="relative aspect-video border w-full bg-muted order-1 rounded-md overflow-hidden">
-                      <a
-                        href={`https://${project.link}`}
-                        target="_blank"
-                        className="flex items-center gap-1"
-                        rel="noreferrer"
-                      >
-                        <Image
-                          src={project.image}
-                          alt={project.imageAlt || `${project.title} preview`}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                        />
-                      </a>
-                    </div>
+            <div className="flex w-fit gap-1 border rounded-lg p-1 bg-background">
+              <Button
+                variant={projectType === "web" ? "default" : "ghost"}
+                size="sm"
+                onClick={() => setProjectType("web")}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <Globe className="w-4 h-4" />
+                Web
+              </Button>
+              <Button
+                variant={projectType === "mobile" ? "default" : "ghost"}
+                size="sm"
+                onClick={() => setProjectType("mobile")}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <Smartphone className="w-4 h-4" />
+                Mobile
+              </Button>
+            </div>
+          </motion.div>
 
-                    <CardContent className="p-4 sm:p-6 flex flex-col justify-between order-1 lg:order-2">
-                      <div>
-                        <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3 sm:gap-0">
-                          <h3 className="text-lg sm:text-xl font-semibold">{project.title}</h3>
-                          <div className="flex gap-2 flex-shrink-0">
-                            <Button variant="outline" size="sm" asChild>
-                              <a
-                                href={`https://${project.link}`}
-                                target="_blank"
-                                className="flex items-center gap-1"
-                                rel="noreferrer"
-                              >
-                                <ExternalLink className="w-3 h-3" />
-                                <span className="hidden xs:inline">Live</span>
-                              </a>
-                            </Button>
-                            <Button variant="outline" size="sm" asChild>
-                              <a href={project.github} target="_blank" className="flex items-center gap-1" rel="noreferrer">
-                                <Github className="w-3 h-3" />
-                                <span className="hidden xs:inline">Code</span>
-                              </a>
-                            </Button>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={projectType}
+              className="grid gap-6 sm:gap-8"
+              variants={projectListVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              {visibleProjects.length === 0 && (
+                <Card>
+                  <CardContent className="p-6 sm:p-8 text-center text-sm sm:text-base text-muted-foreground">
+                    {projectType === "mobile" ? "Mobile apps coming soon." : "Web projects coming soon."}
+                  </CardContent>
+                </Card>
+              )}
+
+              {visibleProjects.map((project, index) => (
+                <motion.div key={project.title} variants={fadeInUp}>
+                  <Card className="p-0 lg:pl-5 hover:shadow-lg dark:hover:shadow-accent transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                    <div className="grid items-center lg:grid-cols-2 gap-0">
+                      <div className="relative aspect-video border w-full bg-muted order-1 rounded-md overflow-hidden">
+                        <a
+                          href={`https://${project.link}`}
+                          target="_blank"
+                          className="flex items-center gap-1"
+                          rel="noreferrer"
+                        >
+                          {project.image ? (
+                            <Image
+                              src={project.image}
+                              alt={project.imageAlt || `${project.title} preview`}
+                              fill
+                              className={projectType === "mobile" ? "object-contain" : "object-cover"}
+                              sizes="(max-width: 1024px) 100vw, 50vw"
+                            />
+                          ) : (
+                            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
+                              <span className="text-2xl sm:text-3xl font-bold text-primary/80">{project.title}</span>
+                            </div>
+                          )}
+                        </a>
+                      </div>
+
+                      <CardContent className="p-4 sm:p-6 flex flex-col justify-between order-1 lg:order-2">
+                        <div>
+                          <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-3 sm:gap-0">
+                            <h3 className="text-lg sm:text-xl font-semibold">{project.title}</h3>
+                            <div className="flex gap-2 flex-shrink-0">
+                              <Button variant="outline" size="sm" asChild>
+                                <a
+                                  href={`https://${project.link}`}
+                                  target="_blank"
+                                  className="flex items-center gap-1"
+                                  rel="noreferrer"
+                                >
+                                  <ExternalLink className="w-3 h-3" />
+                                  <span className="hidden xs:inline">{projectType === "mobile" ? "Download" : "Live"}</span>
+                                </a>
+                              </Button>
+                              {project.github && (
+                                <Button variant="outline" size="sm" asChild>
+                                  <a href={project.github} target="_blank" className="flex items-center gap-1" rel="noreferrer">
+                                    <Github className="w-3 h-3" />
+                                    <span className="hidden xs:inline">Code</span>
+                                  </a>
+                                </Button>
+                              )}
+                            </div>
                           </div>
+
+                          <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                            {project.description}
+                          </p>
                         </div>
 
-                        <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
-                          {project.description}
-                        </p>
-                      </div>
-
-                      <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-auto">
-                        {project.tech.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="secondary" className="text-xs">
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-auto">
+                          {project.tech.map((tech, techIndex) => (
+                            <Badge key={techIndex} variant="secondary" className="text-xs">
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </motion.section>
         <div id="skills" className="relative -top-20 sm:-top-40"></div>
         <motion.section

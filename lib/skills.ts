@@ -1,16 +1,18 @@
 export const skills = {
-  "Languages / Technologies": ["C++", "Golang", "JavaScript", "Python", "TypeScript", "HTML", "Tailwind CSS"],
+  "Languages / Technologies": ["C++", "PHP", "JavaScript", "Python", "TypeScript", "HTML", "Tailwind CSS"],
   "Frameworks & Libraries": [
     "React.js",
     "Next.js",
     "Node.js",
     "Express.js",
+    "Laravel",
     "Three.js",
     "GSAP",
     "Shadcn",
     "Redux Toolkit",
   ],
-  "Databases & Backend Services": ["MongoDB", "MS SQL", "Supabase", "PostgreSQL", "GraphQL"],
+  "Mobile Development": [" React Native", "Expo", "Expo Router", "React Navigation", "Android & iOS development", "EAS Build (APK/AAB)", "Push Notifications", "Camera/QR"],
+  "Databases & Backend Services": ["MongoDB", "MS SQL", "MySQL", "Supabase", "PostgreSQL", "GraphQL"],
   "Software & Platforms": ["Git", "GitHub", "Postman", "Docker", "Figma", "Clerk", "Render", "Vercel", "Windows", "WSL"],
   "CS Fundamentals": [
     "Data Structures & Algorithms",
@@ -19,5 +21,5 @@ export const skills = {
     "REST APIs",
   ],
   "AI / Developer Tools": ["ChatGPT", "Claude", "Arena.ai", "GitHub Copilot", "AI-assisted debugging"],
-  Other: ["Web Development", "State Management", "Vitest", "Playwright"],
+  Other: ["Web Development", "State Management", "Socket.IO", "Vitest", "Playwright"],
 }
