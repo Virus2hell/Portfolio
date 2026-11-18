@@ -18,7 +18,7 @@ export const mobileProjects: {
     tech: ["React Native", "Expo", "Node.js", "Express.js", "PostgreSQL", "NeonDB", "JWT", "EAS Build"],
     link: "expo.dev/accounts/atharva269/projects/society-manager/builds/dcaf0c72-e2bb-4474-893a-4f2b7b9b6853",
     github: "https://github.com/Virus2hell/Society-Management-App",
-    image: "images/mobile-projects/society-manager-showcase-4k.png",
+    image: "/images/mobile-projects/society-manager-showcase-4k.png",
     imageAlt: "Society Manager mobile app screens"
   },
   {
