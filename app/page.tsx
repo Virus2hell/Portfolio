@@ -171,7 +171,7 @@ export default function Portfolio() {
             </Button>
             <Button variant="outline" size="sm" asChild title="Resume">
               <a
-                href="https://drive.google.com/file/d/1lBZb7scUvRqU2AWdvh3etmmkfzNa3jGK/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1llb4HlYOBeo5JJh3HYxYLNlSTNcRFudg/view?usp=drive_link"
                 target="_blank"
                 className="flex items-center gap-2"
                 rel="noreferrer"
