@@ -4,7 +4,7 @@ export const projects = [
     description:
       "An AI study assistant built on a RAG pipeline that lets you chat with your PDFs and turn them into question banks. Answers stream in with page-level citations using gte-small embeddings and pgvector similarity search, while a map-reduce Q&A generator creates 10–30 MCQ, short-answer and true/false questions by difficulty, downloadable as a PDF. Each user's documents are secured with Row Level Security.",
     tech: ["React", "TypeScript", "LangChain.js", "Supabase", "pgvector", "Groq"],
-    link: "doc-mind-tan.vercel.app",
+    link: "doc-mind-tan.vercel.app/",
     github: "https://github.com/Virus2hell/DocMind",
     image: "/images/projects/docmind.png",
     imageAlt: "DocMind chat with PDF and Q&A generator interface"
